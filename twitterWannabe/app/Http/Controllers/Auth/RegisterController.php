@@ -28,8 +28,9 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
-        //store user
-        //sign the user in
-        //redirect
+        //sign in
+
+        return redirect()->route('dashboard');
+
     }
 }
